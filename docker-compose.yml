@@ -12,6 +12,8 @@ services:
       - DATABASE_URL=postgresql://hello_fastapi:hello_fastapi@db/hello_fastapi_dev
   db:
     image: postgres:12.1-alpine
+    ports:
+      - '5432:5432'
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
